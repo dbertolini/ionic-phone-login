@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Verificación</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="barcode"></ion-icon>&nbsp;&nbsp;Código:</ion-label>
+      <ion-input [(ngModel)]="user.phoneVerifyCode" placeholder="123456"></ion-input>
+    </ion-item>
+    <button block (click)="verify()" ion-button>
+      <ion-icon name="checkmark">&nbsp;</ion-icon>
+      Verificar
+    </button>
+  </ion-list>
+</ion-content>

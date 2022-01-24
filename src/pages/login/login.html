@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="globe"></ion-icon>&nbsp;&nbsp;País:</ion-label>
+      <ion-select block [(ngModel)]="user.phoneCountryCode">
+        <ion-option selected value="+54">Argentina</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="call"></ion-icon>&nbsp;&nbsp;Teléfono:</ion-label>
+      <ion-input block type="number" [(ngModel)]="user.phone" placeholder="1133863747"></ion-input>
+    </ion-item>
+    <br>
+    <div align="center" id="recaptcha-container"></div>
+    <br>
+    <button block (click)="phoneLogin(user)" ion-button>
+      <ion-icon name="log-in"></ion-icon>
+      &nbsp;&nbsp;Ingresar
+    </button>
+  </ion-list>
+
+</ion-content>
